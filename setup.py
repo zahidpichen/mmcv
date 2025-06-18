@@ -23,7 +23,9 @@ try:
         from torch.utils.cpp_extension import BuildExtension
         EXT_TYPE = 'pytorch'
     cmd_class = {'build_ext': BuildExtension}
+    print("=====================================================")
     print(f'Successfully found CUDA, using EXT_TYPE = {EXT_TYPE}')
+    print("=====================================================")
 except ModuleNotFoundError:
     cmd_class = {}
     print('Skip building ext ops due to the absence of torch.')
